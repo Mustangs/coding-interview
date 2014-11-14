@@ -1,7 +1,10 @@
 import java.util.*;
 
+/**
+ * Question: Write an algorithm to determine if two nodes can reach each other in a directed graph.
+ */
 public class DFS {
-	
+
 	public static boolean dfs(Graph g, Node src, Node dest) {
 		src.marked = true;
 		if(src == dest)
@@ -15,30 +18,9 @@ public class DFS {
 		return false;
 	}
 
+
 	public static void main(String[] args) {
-
-		Graph g = new Graph();
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int m = sc.nextInt();
-
-		for(int i = 0; i < n; i++)
-			g.nodes.add(new Node(i));
-
-		for(int i = 0; i < m; i++) {
-			int a = sc.nextInt();
-			int b = sc.nextInt();
-			g.nodes.get(a).adj.add(g.nodes.get(b));
-		}
-
-		for(int i = 0; i < n; i++) {
-			Node u = g.nodes.get(i);
-			System.out.print(u + ": ");
-			for(Node v : u.getAdjacent())
-				System.out.print(v + " ");
-			System.out.println();
-		}
-
+		Graph g = Graph.readGraph();
 	}
 }
 

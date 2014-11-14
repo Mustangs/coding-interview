@@ -1,3 +1,7 @@
+/**
+ * Simple class for TreeNode
+ */
+
 public class TreeNode {
 	TreeNode left, right;
 	int element;

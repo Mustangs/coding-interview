@@ -1,3 +1,7 @@
+/**
+ * Question: Given a binary tree, check if the tree is balanced.
+ * A tree is balanced at r if |height(r.left) - height(r.right)| <= 1
+ */
 public class BalancedTree {
 
 	public static int height(TreeNode r) {
